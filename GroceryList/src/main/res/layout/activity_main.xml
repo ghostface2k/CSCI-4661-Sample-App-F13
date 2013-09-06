@@ -13,4 +13,11 @@
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
 
+    <EditText
+        android:id="@+id/edit_text"
+        android:background="#ffff3df1"
+       android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
