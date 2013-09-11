@@ -8,4 +8,11 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="edu.uno.csci4661.grocerylist.ListFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_list" />
+
 </RelativeLayout>

@@ -2,18 +2,17 @@ package edu.uno.csci4661.grocerylist;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
-import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements ListFragment.ListFragmentListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     @Override
@@ -36,5 +35,10 @@ public class MainActivity extends Activity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onListItemSelected(String item) {
+        Toast.makeText(this, item, Toast.LENGTH_SHORT).show();
     }
 }
