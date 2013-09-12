@@ -13,8 +13,8 @@ public class MainActivity extends Activity implements ItemListFragment.ListFragm
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
+
 
     @Override
     protected void onStart() {
@@ -53,6 +53,6 @@ public class MainActivity extends Activity implements ItemListFragment.ListFragm
 //            fragment.setArguments(args);
 //        }
 
-        Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "id: " + id, Toast.LENGTH_SHORT).show();
     }
 }
