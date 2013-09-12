@@ -23,11 +23,11 @@ public class DataParser {
     public static List<GroceryItem> getData(Context context) throws IOException {
         Gson gson = new Gson();
         String jsonOutput = readJsonFile(context);
-        Type listType = new TypeToken<List<GroceryItem>>() {
+        Type listType = new TypeToken<ItemWrapper>() {
         }.getType();
-        List<GroceryItem> items = gson.fromJson(jsonOutput, listType);
+        ItemWrapper items = gson.fromJson(jsonOutput, listType);
 
-        return items;
+        return items.getItems();
     }
 
     private static String readJsonFile(Context context) throws IOException {
@@ -47,5 +47,17 @@ public class DataParser {
         String jsonString = writer.toString();
 
         return jsonString;
+    }
+
+    private class ItemWrapper {
+        private List<GroceryItem> items;
+
+        public List<GroceryItem> getItems() {
+            return items;
+        }
+
+        public void setItems(List<GroceryItem> items) {
+            this.items = items;
+        }
     }
 }
