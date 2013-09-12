@@ -1,7 +1,7 @@
 package edu.uno.csci4661.grocerylist;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Toast;
 
@@ -38,6 +38,14 @@ public class MainActivity extends Activity implements ItemListFragment.ListFragm
 
     @Override
     public void onListItemSelected(String item) {
+
+//        // the detail fragment is not in the view, most likely on a smaller device
+//        if(this.getFragmentManager().findFragmentById(R.id.detail_fragment) == null) {
+//            // launch a ItemDetail Activity
+//        } else { // detail fragment is in view
+//            // update the existing detail fragment in the UI, usually by replacing it
+//        }
+
         Toast.makeText(this, item, Toast.LENGTH_SHORT).show();
     }
 }
