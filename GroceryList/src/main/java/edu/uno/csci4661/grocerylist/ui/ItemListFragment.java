@@ -1,4 +1,4 @@
-package edu.uno.csci4661.grocerylist;
+package edu.uno.csci4661.grocerylist.ui;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import edu.uno.csci4661.grocerylist.R;
 
 public class ItemListFragment extends Fragment {
 

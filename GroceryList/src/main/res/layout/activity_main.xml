@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/list_fragment"
-        android:name="edu.uno.csci4661.grocerylist.ItemListFragment"
+        android:name="edu.uno.csci4661.grocerylist.ui.ItemListFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout="@layout/fragment_list" />

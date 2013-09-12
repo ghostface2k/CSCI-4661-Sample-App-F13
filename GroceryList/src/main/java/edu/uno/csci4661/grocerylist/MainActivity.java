@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Toast;
 
+import edu.uno.csci4661.grocerylist.ui.ItemListFragment;
+
 public class MainActivity extends Activity implements ItemListFragment.ListFragmentListener {
 
     @Override
