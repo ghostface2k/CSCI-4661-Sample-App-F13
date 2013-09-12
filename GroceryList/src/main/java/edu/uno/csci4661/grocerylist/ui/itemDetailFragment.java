@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class DetailFragment extends Fragment {
+public class ItemDetailFragment extends Fragment {
     public static final String ITEM_ID = "item_id";
 
     @Override

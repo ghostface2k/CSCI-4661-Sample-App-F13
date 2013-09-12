@@ -47,9 +47,9 @@ public class MainActivity extends Activity implements ItemListFragment.ListFragm
 //            // you can pass a data to an activity via Extras, then pass it along to the fragment
 //        } else { // detail fragment is in view
 //            // update the existing detail fragment in the UI, usually by replacing it
-//            DetailFragment fragment = new DetailFragment();
+//            ItemDetailFragment fragment = new ItemDetailFragment();
 //            Bundle args = new Bundle();
-//            args.putInt(DetailFragment.ITEM_ID,id);
+//            args.putInt(ItemDetailFragment.ITEM_ID,id);
 //            fragment.setArguments(args);
 //        }
 
