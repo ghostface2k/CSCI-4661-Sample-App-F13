@@ -3,7 +3,6 @@ package edu.uno.csci4661.grocerylist;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-/**
- * Created by danielward on 9/10/13.
- */
 public class ItemListFragment extends Fragment {
 
     public interface ListFragmentListener {
@@ -34,7 +30,7 @@ public class ItemListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list,container);
         ListView list = (ListView) view.findViewById(R.id.listview);
-        list.setAdapter(new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_list_item_1,items));
+        list.setAdapter(new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_list_item_1, items));
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
