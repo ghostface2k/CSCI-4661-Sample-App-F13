@@ -13,7 +13,7 @@ import android.widget.ListView;
 public class ItemListFragment extends Fragment {
 
     public interface ListFragmentListener {
-        public void onListItemSelected(String item);
+        public void onListItemSelected(int id);
     }
 
     String[] items = {"first", "second", "third"};
@@ -21,7 +21,7 @@ public class ItemListFragment extends Fragment {
 
     private ListFragmentListener listener = new ListFragmentListener() {
         @Override
-        public void onListItemSelected(String item) {
+        public void onListItemSelected(int id) {
             // left blank
         }
     };
@@ -35,7 +35,8 @@ public class ItemListFragment extends Fragment {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                listener.onListItemSelected(items[position]);
+//                //the listener now takes an id of an item
+//                listener.onListItemSelected(items[position].getId());
             }
         });
 

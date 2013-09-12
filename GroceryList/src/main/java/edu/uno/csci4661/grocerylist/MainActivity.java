@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements ItemListFragment.ListFragmentListener{
+public class MainActivity extends Activity implements ItemListFragment.ListFragmentListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class MainActivity extends Activity implements ItemListFragment.ListFragm
     }
 
     @Override
-    public void onListItemSelected(String item) {
+    public void onListItemSelected(int id) {
 
 //        // the detail fragment is not in the view, most likely on a smaller device
 //        if(this.getFragmentManager().findFragmentById(R.id.detail_fragment) == null) {
@@ -46,6 +46,6 @@ public class MainActivity extends Activity implements ItemListFragment.ListFragm
 //            // update the existing detail fragment in the UI, usually by replacing it
 //        }
 
-        Toast.makeText(this, item, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
     }
 }
