@@ -1,9 +1,19 @@
 package edu.uno.csci4661.grocerylist.model;
 
 public class GroceryItem {
+
+    int id;
     String name;
     String description;
     int quantity;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
