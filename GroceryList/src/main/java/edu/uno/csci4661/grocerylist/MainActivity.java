@@ -44,8 +44,13 @@ public class MainActivity extends Activity implements ItemListFragment.ListFragm
 //        // the detail fragment is not in the view, most likely on a smaller device
 //        if(this.getFragmentManager().findFragmentById(R.id.detail_fragment) == null) {
 //            // launch a ItemDetail Activity
+//            // you can pass a data to an activity via Extras, then pass it along to the fragment
 //        } else { // detail fragment is in view
 //            // update the existing detail fragment in the UI, usually by replacing it
+//            DetailFragment fragment = new DetailFragment();
+//            Bundle args = new Bundle();
+//            args.putInt(DetailFragment.ITEM_ID,id);
+//            fragment.setArguments(args);
 //        }
 
         Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
