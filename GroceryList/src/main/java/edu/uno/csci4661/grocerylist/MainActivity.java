@@ -2,11 +2,10 @@ package edu.uno.csci4661.grocerylist;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.util.Log;
 import android.view.Menu;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements ListFragment.ListFragmentListener{
+public class MainActivity extends Activity implements ItemListFragment.ListFragmentListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

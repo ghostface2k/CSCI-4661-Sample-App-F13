@@ -14,7 +14,7 @@ import android.widget.ListView;
 /**
  * Created by danielward on 9/10/13.
  */
-public class ListFragment extends Fragment {
+public class ItemListFragment extends Fragment {
 
     public interface ListFragmentListener {
         public void onListItemSelected(String item);
