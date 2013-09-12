@@ -42,7 +42,8 @@ public class GroceryItem {
     @Override
     public String toString() {
         return "GroceryItem{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", quantity=" + quantity +
                 '}';
