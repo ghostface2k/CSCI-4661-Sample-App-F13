@@ -1,8 +1,5 @@
 package edu.uno.csci4661.grocerylist.model;
 
-/**
- * Created by danielward on 9/12/13.
- */
 public class GroceryItem {
     String name;
     String description;
@@ -30,5 +27,14 @@ public class GroceryItem {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "GroceryItem{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", quantity=" + quantity +
+                '}';
     }
 }
