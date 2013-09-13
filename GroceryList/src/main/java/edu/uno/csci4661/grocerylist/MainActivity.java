@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Toast;
 
+import edu.uno.csci4661.grocerylist.ui.ItemDetailActivity;
 import edu.uno.csci4661.grocerylist.ui.ItemListFragment;
 
 public class MainActivity extends Activity implements ItemListFragment.ListFragmentListener {
@@ -41,17 +42,18 @@ public class MainActivity extends Activity implements ItemListFragment.ListFragm
     @Override
     public void onListItemSelected(int id) {
 
-//        // the detail fragment is not in the view, most likely on a smaller device
-//        if(this.getFragmentManager().findFragmentById(R.id.detail_fragment) == null) {
-//            // launch a ItemDetail Activity
-//            // you can pass a data to an activity via Extras, then pass it along to the fragment
-//        } else { // detail fragment is in view
-//            // update the existing detail fragment in the UI, usually by replacing it
-//            ItemDetailFragment fragment = new ItemDetailFragment();
-//            Bundle args = new Bundle();
-//            args.putInt(ItemDetailFragment.ITEM_ID,id);
-//            fragment.setArguments(args);
-//        }
+        // the detail fragment is not in the view, most likely on a smaller device
+        if(this.getFragmentManager().findFragmentById(R.id.detail_fragment) == null) {
+            Intent intent = new Intent(this, ItemDetailActivity);//call Activity that contains frag
+            // launch a ItemDetail Activity
+            // you can pass a data to an activity via Extras, then pass it along to the fragment
+        } else { // detail fragment is in view
+            // update the existing detail fragment in the UI, usually by replacing it
+            ItemDetailFragment fragment = new ItemDetailFragment();
+            Bundle args = new Bundle();
+            args.putInt(ItemDetailFragment.ITEM_ID,id);
+            fragment.setArguments(args);
+        }
 
         Toast.makeText(this, "id: " + id, Toast.LENGTH_SHORT).show();
     }
